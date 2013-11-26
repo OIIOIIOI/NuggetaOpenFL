@@ -93,6 +93,8 @@ class Main extends Sprite {
 	}
 	
 	function startResponseHandler (sr:StartResponse) {
+		// Remove the handler (if using the handler version)
+		//nuggetaPlug.removeStartResponseHandler(startResponseHandler);
 		if (sr.getStartStatus() == StartStatus.FAILED) {
 			nuggetaText.text = "Connection Failed to Nuggeta";
 		}
