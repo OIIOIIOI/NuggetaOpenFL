@@ -84,8 +84,11 @@ class Main extends Sprite {
 		var messages:NList<Message> = nuggetaPlug.pump();
 		for (i in 0...messages.size()) {
 			var m:Message = messages.get(i);
-			if (Std.is(m, StartResponse))	startResponseHandler(cast m);
-			else							nuggetaText.text = "Unhandled message: " + m;
+			if (Std.is(m, StartResponse)) {
+				startResponseHandler(cast m);
+			} else {
+				nuggetaText.text = "Unhandled message: " + m;
+			}
 		}
 	}
 	
